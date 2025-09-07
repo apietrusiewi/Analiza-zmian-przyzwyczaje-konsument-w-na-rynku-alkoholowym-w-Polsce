@@ -1,0 +1,590 @@
+
+=== H1: płeć × napoje 0% ===
+           y
+x           nie tak
+  Kobieta    30  21
+  Mężczyzna  31  29
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 0.31793, df = 1, p-value = 0.5729
+
+
+[H1] prop.test (różnica proporcji + 95% CI):
+
+	2-sample test for equality of proportions with continuity correction
+
+data:  tab_h1
+X-squared = 0.31793, df = 1, p-value = 0.5729
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.1315890  0.2747263
+sample estimates:
+   prop 1    prop 2 
+0.5882353 0.5166667 
+
+
+[H1] fisher.test (OR + 95% CI):
+
+	Fisher's Exact Test for Count Data
+
+data:  tab_h1
+p-value = 0.5661
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.5891726 3.0427948
+sample estimates:
+odds ratio 
+  1.332895 
+
+
+=== H2: wiek (18–34) × RTD ===
+       y
+x       nie tak
+  18–34  57   5
+  35+    46   3
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 1
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.1099953 4.0647423
+sample estimates:
+odds ratio 
+ 0.7454294 
+
+
+=== H3: duże miasto × eko ===
+          y
+x          nie tak
+  duze      28   4
+  mniejsze  73   6
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.47
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.126020 3.002182
+sample estimates:
+odds ratio 
+  0.578493 
+
+
+=== H4: wzrost cen × rzadziej ===
+     y
+x     nie tak
+  nie  23   1
+  tak  69  18
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.06879
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+   0.8407713 260.3966748
+sample estimates:
+odds ratio 
+  5.936331 
+
+
+[H4] Udział 'rzadziej kupuję' w grupach (wzrost cen: nie/tak)
+ - nie: 4.2% (n=24; 95% CI: 0.2–23.1%)
+ - tak: 20.7% (n=87; 95% CI: 13.0–31.0%)
+
+=== H5: Powody zmiany (tylko ci, którzy zmienili) ===
+# A tibble: 4 × 2
+  powod                             n
+  <chr>                         <int>
+1 Wzrost świadomości zdrowotnej    32
+2 Zmiana trybu życia               27
+3 Zmiana środowiska                25
+4 Wzrost cen alkoholu               3
+
+=== H6: COVID × zmiana nawyków ===
+     y
+x     nie tak
+  nie  49  37
+  tak   7  18
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 5.3984, df = 1, p-value = 0.02016
+
+
+[H6] Udział 'zmiana nawyków' w grupach COVID (nie/tak)
+ - nie: 43.0% (n=86; 95% CI: 32.5–54.1%)
+ - tak: 72.0% (n=25; 95% CI: 50.4–87.1%)
+
+=== H7a: wykształcenie × zmiana miejsca (tańsze) ===
+         y
+x         nie tak
+  niskie   34   8
+  wysokie  55  14
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 6.098e-31, df = 1, p-value = 1
+
+
+=== H7b: wieś × zmiana miejsca (tańsze) ===
+          y
+x          nie tak
+  nie_wies  63  15
+  wies      26   7
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 0, df = 1, p-value = 1
+
+
+=== H8: Szara strefa – porównanie wg wzrostu cen ===
+     
+      nie tak
+  nie  23   1
+  tak  76  11
+
+=== H8: wzrost cen × szara strefa ===
+     y
+x     nie tak
+  nie  23   1
+  tak  76  11
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.4568
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+   0.4358793 149.3352367
+sample estimates:
+odds ratio 
+  3.302115 
+
+
+[H8] prop.test (różnica proporcji + 95% CI):
+
+	2-sample test for equality of proportions with continuity correction
+
+data:  tab_h8_2x2
+X-squared = 0.66058, df = 1, p-value = 0.4164
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.04796224  0.21750247
+sample estimates:
+   prop 1    prop 2 
+0.9583333 0.8735632 
+
+
+[H8] fisher.test (OR + 95% CI):
+
+	Fisher's Exact Test for Count Data
+
+data:  tab_h8_2x2
+p-value = 0.4568
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+   0.4358793 149.3352367
+sample estimates:
+odds ratio 
+  3.302115 
+
+
+=== H9: ograniczenia reklamy/sprzedaży × częste mocne ===
+     y
+x     nie tak
+  nie  64  12
+  tak  24  11
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 2.6794, df = 1, p-value = 0.1017
+
+
+=== H10a: plan ograniczenia × 'kampanie mają wpływ' ===
+     y
+x     nie tak
+  nie  37   4
+  tak  51  19
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.0314
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+  1.016398 14.936765
+sample estimates:
+odds ratio 
+  3.412017 
+
+
+[H10a] Udział 'kampanie mają wpływ' w grupach planu ograniczenia (nie/tak)
+ - nie: 9.8% (n=41; 95% CI: 3.2–24.1%)
+ - tak: 27.1% (n=70; 95% CI: 17.5–39.3%)
+
+=== H10b: plan ograniczenia × 'kampania edukacyjna' ===
+     y
+x     nie tak
+  nie  40   1
+  tak  64   6
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.2568
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+   0.4262606 176.5875047
+sample estimates:
+odds ratio 
+  3.714654 
+
+
+=== H11: wzrost cen × tańsze marki ===
+     y
+x     nie tak
+  nie  24   0
+  tak  70  17
+
+Metoda: Fisher exact 
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 0.02109
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 1.279813      Inf
+sample estimates:
+odds ratio 
+       Inf 
+
+
+[H11] Udział 'wybieram tańsze marki' w grupach (wzrost cen: nie/tak)
+ - nie: 0.0% (n=24; 95% CI: 0.0–17.2%)
+ - tak: 19.5% (n=87; 95% CI: 12.1–29.7%)
+[H11] OR (Haldane–Anscombe) = 12.16 (korekcja 0.5)
+
+=== H12a: napoje 0% × 'zmiana trybu życia' ===
+     y
+x     nie tak
+  nie  12  17
+  tak  21  15
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 1.2311, df = 1, p-value = 0.2672
+
+
+=== H12b: napoje 0% × plan ograniczenia ===
+     y
+x     nie tak
+  nie  27  34
+  tak  14  36
+
+Metoda: Chi-square (Yates) 
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  tab
+X-squared = 2.4606, df = 1, p-value = 0.1167
+
+
+=== Opisowe: demografia i częstotliwość ===
+
+=== Rozkład rodzajów alkoholu (udział %) ===
+# A tibble: 7 × 2
+  kategoria                                   udzial
+  <chr>                                        <dbl>
+1 Piwo                                          51.4
+2 Wódka                                         37.8
+3 Wino                                          34.2
+4 Napoje bezalkoholowe (np. piwo 0%, wino 0%)   30.6
+5 Whisky/Whiskey                                26.1
+6 Gotowe koktajle (RTD)                          7.2
+7 Gin                                            2.7
+
+
+ MODELE LOGISTYCZNE DLA WYBRANYCH HIPOTEZ (skorygowane) 
+
+============================================================
+[H4] rzadziej ~ wzrost_cen + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.114 | (Nagelkerke): NA
+
+VIF (kolinearność):
+   wzrost_cen      plec_bin    wiek_18_34 wykszt_niskie   duze_miasto 
+     1.032382      1.110492      1.102496      1.142456      1.121254 
+
+Hosmer–Lemeshow: X2=3.489, df=8, p=0.9000
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term      OR     CI_L    CI_H       z        p
+                  (Intercept) 0.03163 0.003037  0.3293 -2.8891 0.003864
+        mm[, -1]wzrost_centak 6.22552 0.835117 46.4091  1.7842 0.074397
+    mm[, -1]plec_binMężczyzna 0.54409 0.191857  1.5430 -1.1444 0.252440
+        mm[, -1]wiek_18_3435+ 0.57217 0.210983  1.5517 -1.0969 0.272701
+ mm[, -1]wykszt_niskiewysokie 0.61290 0.209023  1.7972 -0.8919 0.372429
+  mm[, -1]duze_miastomniejsze 4.10183 0.872884 19.2752  1.7878 0.073814
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[H11] tansze_marki ~ wzrost_cen + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.206 | (Nagelkerke): NA
+
+VIF (kolinearność):
+   wzrost_cen      plec_bin    wiek_18_34 wykszt_niskie   duze_miasto 
+     1.000000      1.052742      1.062422      1.119277      1.170118 
+
+Hosmer–Lemeshow: X2=3.542, df=7, p=0.8308
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term        OR      CI_L      CI_H        z          p
+                  (Intercept) 1.475e-09 2.308e-10 9.423e-09 -21.4888 1.980e-102
+        mm[, -1]wzrost_centak 1.229e+08 5.352e+07 2.821e+08  43.9245  0.000e+00
+    mm[, -1]plec_binMężczyzna 3.747e+00 1.073e+00 1.308e+01   2.0706  3.840e-02
+        mm[, -1]wiek_18_3435+ 1.200e+00 3.662e-01 3.930e+00   0.3007  7.636e-01
+ mm[, -1]wykszt_niskiewysokie 3.130e-01 9.018e-02 1.087e+00  -1.8290  6.739e-02
+  mm[, -1]duze_miastomniejsze 1.102e+00 2.887e-01 4.204e+00   0.1418  8.873e-01
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[H8] szara_strefa ~ wzrost_cen + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.074 | (Nagelkerke): NA
+
+VIF (kolinearność):
+   wzrost_cen      plec_bin    wiek_18_34 wykszt_niskie   duze_miasto 
+     1.028810      1.158187      1.131005      1.144136      1.124800 
+
+Hosmer–Lemeshow: X2=9.341, df=7, p=0.2291
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term      OR      CI_L    CI_H       z         p
+                  (Intercept) 0.00625 0.0003635  0.1074 -3.4971 0.0004704
+        mm[, -1]wzrost_centak 3.44889 0.4571822 26.0177  1.2008 0.2298191
+    mm[, -1]plec_binMężczyzna 2.79570 0.7630953 10.2424  1.5518 0.1206987
+        mm[, -1]wiek_18_3435+ 1.91512 0.4378873  8.3759  0.8631 0.3880908
+ mm[, -1]wykszt_niskiewysokie 1.65898 0.4262919  6.4562  0.7301 0.4653046
+  mm[, -1]duze_miastomniejsze 2.30608 0.2900938 18.3321  0.7900 0.4295561
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[H9] czeste_mocne ~ zauw_ograniczenia + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.147 | (Nagelkerke): NA
+
+VIF (kolinearność):
+zauw_ograniczenia          plec_bin        wiek_18_34     wykszt_niskie       duze_miasto 
+         1.084339          1.193946          1.118813          1.184153          1.142752 
+
+Hosmer–Lemeshow: X2=3.897, df=8, p=0.8663
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term      OR     CI_L    CI_H       z         p
+                  (Intercept) 0.01613 0.001952  0.1333 -3.8298 0.0001283
+ mm[, -1]zauw_ograniczeniatak 3.13355 1.079351  9.0973  2.1004 0.0356950
+    mm[, -1]plec_binMężczyzna 5.81907 1.706813 19.8391  2.8143 0.0048884
+        mm[, -1]wiek_18_3435+ 1.55764 0.561348  4.3222  0.8511 0.3947253
+ mm[, -1]wykszt_niskiewysokie 1.28354 0.400214  4.1165  0.4198 0.6746198
+  mm[, -1]duze_miastomniejsze 3.15779 0.759883 13.1226  1.5821 0.1136161
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[H10] planuje_ograniczyc ~ czynniki + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.063 | (Nagelkerke): NA
+
+VIF (kolinearność):
+   wzrost_cen  kampanie_tak   covid_wplyw      kupuje_0      plec_bin    wiek_18_34 wykszt_niskie 
+     1.079261      1.039430      1.112389      1.125555      1.154673      1.242947      1.230403 
+  duze_miasto 
+     1.310103 
+
+Hosmer–Lemeshow: X2=8.217, df=8, p=0.4126
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term     OR   CI_L   CI_H        z       p
+                  (Intercept) 1.7869 0.4505  7.088  0.82563 0.40901
+        mm[, -1]wzrost_centak 0.8230 0.3068  2.208 -0.38692 0.69881
+      mm[, -1]kampanie_taktak 3.0558 0.8684 10.752  1.74020 0.08182
+       mm[, -1]covid_wplywtak 1.1658 0.4064  3.344  0.28528 0.77543
+          mm[, -1]kupuje_0tak 1.8971 0.7868  4.574  1.42597 0.15388
+    mm[, -1]plec_binMężczyzna 0.6281 0.2690  1.466 -1.07503 0.28236
+        mm[, -1]wiek_18_3435+ 0.7458 0.2908  1.913 -0.61023 0.54171
+ mm[, -1]wykszt_niskiewysokie 0.9786 0.4000  2.394 -0.04750 0.96211
+  mm[, -1]duze_miastomniejsze 1.0114 0.3477  2.942  0.02086 0.98335
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[H3] kupuje_eko ~ duze_miasto + kontrole
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.091 | (Nagelkerke): NA
+
+VIF (kolinearność):
+  duze_miasto      plec_bin    wiek_18_34 wykszt_niskie 
+     1.274868      1.139884      1.177817      1.201270 
+
+Hosmer–Lemeshow: X2=5.454, df=6, p=0.4870
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term     OR    CI_L   CI_H      z       p
+                  (Intercept) 0.1970 0.03808  1.019 -1.937 0.05270
+  mm[, -1]duze_miastomniejsze 0.2723 0.05839  1.270 -1.656 0.09770
+    mm[, -1]plec_binMężczyzna 0.5178 0.16107  1.664 -1.105 0.26921
+        mm[, -1]wiek_18_3435+ 4.5870 0.99009 21.251  1.947 0.05151
+ mm[, -1]wykszt_niskiewysokie 0.5422 0.17519  1.678 -1.062 0.28819
+
+Efekty marginalne (AME):
+nieobliczalne
+
+============================================================
+[DOD] kupuje_0 ~ styl + socjo
+============================================================
+
+N obserwacji (po na.omit): 111 
+fitting null model for pseudo-r2
+Pseudo-R2 (McFadden): 0.052 | (Nagelkerke): NA
+
+VIF (kolinearność):
+       czeste         mocne           rtd         nisko      plec_bin    wiek_18_34 wykszt_niskie 
+     1.122229      1.076956      1.077242      1.088095      1.168415      1.235847      1.209479 
+  duze_miasto 
+     1.305337 
+
+Hosmer–Lemeshow: X2=5.102, df=8, p=0.7466
+
+Współczynniki (OR, 95% CI, p; błędy odporne):
+                         term     OR   CI_L   CI_H       z       p
+                  (Intercept) 0.4423 0.1048 1.8674 -1.1101 0.26697
+            mm[, -1]czestetak 0.9528 0.3968 2.2874 -0.1083 0.91376
+            mm[, -1]mocneTRUE 1.1321 0.5132 2.4972  0.3074 0.75856
+              mm[, -1]rtdTRUE 0.6761 0.1413 3.2342 -0.4902 0.62400
+            mm[, -1]niskoTRUE 0.8442 0.3539 2.0141 -0.3817 0.70271
+    mm[, -1]plec_binMężczyzna 1.2397 0.5448 2.8208  0.5121 0.60855
+        mm[, -1]wiek_18_3435+ 0.3990 0.1637 0.9727 -2.0209 0.04329
+ mm[, -1]wykszt_niskiewysokie 1.4584 0.6334 3.3578  0.8868 0.37518
+  mm[, -1]duze_miastomniejsze 2.8713 1.0505 7.8483  2.0559 0.03979
+
+Efekty marginalne (AME):
+nieobliczalne
+
+
+ KLASTROWANIE: STYL KONSUMPCJI 
+  k       sil
+1 2 0.2935245
+2 3 0.3539716
+3 4 0.4794309
+4 5 0.4803714
+5 6 0.4992793
+
+Wybrano k=6 (najwyższa średnia sylwetka).
+Śr. szerokość sylwetki (k=6): 0.499
+
+Wielkości klastrów (styl):
+cl_styl
+ 1  2  3  4  5  6 
+23 13 15 12 19 29 
+
+Profile klastrów (odsetki % cech):
+# A tibble: 6 × 6
+  cluster   rtd mocne nisko  zero czeste
+  <fct>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 1         0    73.9  91.3  21.7  100  
+2 2         0   100     0   100     46.2
+3 3        13.3 100   100     0      0  
+4 4        25     0   100     0      0  
+5 5         0    21.1   0    15.8    0  
+6 6        10.3  31   100   100     17.2
+
+
+ KLASTROWANIE: REAKCJA NA CENY 
+  k       sil
+1 2 0.6401670
+2 3 0.7215614
+3 4 0.7611306
+4 5 0.8135524
+5 6 0.8674115
+
+Wybrano k=6 (najwyższa średnia sylwetka).
+Śr. szerokość sylwetki (k=6): 0.867
+
+Wielkości klastrów (reakcje cenowe):
+cl_re
+ 1  2  3  4  5  6 
+66  8 12  9  9  7 
+
+Profile klastrów (odsetki % zachowań):
+# A tibble: 6 × 5
+  cluster rzadziej tansze_marki mniejsze_ilosci zmiana_miejsca
+  <fct>      <dbl>        <dbl>           <dbl>          <dbl>
+1 1            0            0               0                0
+2 2           25          100              12.5            100
+3 3          100            8.3             0                0
+4 4           55.6         11.1           100                0
+5 5            0            0               0              100
+6 6            0          100              28.6              0
